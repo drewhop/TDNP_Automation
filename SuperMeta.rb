@@ -1,25 +1,23 @@
-# ============================================================================= #
-# SuperMeta.rb																	#
-# <andrew.weidner@unt.edu>														#
-# 																				#
-# Description:  creates a super_metadata.xml file based on the information		#
-#				recorded in a TDNP microfilm evaluation spreadsheet				#
-#				optional export to the PTH New Record Creator					#
-#																				#
-# INSTRUCTIONS																	#
-# 1. cd to the directory with the evaluation spreadsheet						#
-#																				#
-# 2. run the following code on the command line:								#
-#		ruby path\to\SuperMeta.rb filename.xls [optional 2 or 3 flag]			#
-#																				#
-# 3. script creates a super_metadata.xml file in the working directory			#
-#	  * Super-Metadata field 1 in the evaluation spreadsheet is the default		#
-#	  * type 2 or 3 after the filename to create metadata for those fields		#
-#																				#
-# 4. script prompts to load the template in the PTH New Record Creator			#
-#	  * requires Chrome browser & ChromeDriver placed on system path			#
-#	  * requires selenium-webdriver gem											#
-# ============================================================================= #
+# SuperMeta.rb
+# <andrew.weidner@unt.edu>
+#
+# Description:  creates a super_metadata.xml file based on the information
+#		recorded in a TDNP microfilm evaluation spreadsheet
+#		optional export to the PTH New Record Creator
+#
+# INSTRUCTIONS
+# 1. cd to the directory with the evaluation spreadsheet
+#
+# 2. run the following code on the command line:
+#		ruby path\to\SuperMeta.rb filename.xls [optional 2 or 3 flag]
+#
+# 3. script creates a super_metadata.xml file in the working directory
+#	  * Super-Metadata field 1 in the evaluation spreadsheet is the default
+#	  * type 2 or 3 after the filename to create metadata for those fields
+#
+# 4. script prompts to load the template in the PTH New Record Creator
+#	  * requires Chrome browser & ChromeDriver placed on system path
+#	  * requires selenium-webdriver gem
 
 require 'win32ole'
 require 'selenium-webdriver'
